@@ -1,0 +1,69 @@
+:root {
+    --primary-color: #143d59;
+    --secondary-color: #f4b41a;
+
+    --box-shadow: 0 4px 8px 0 rgba(34, 34, 33, 0.9),
+        0 6px 20px 0 rgba(34, 33, 34, 0.9);
+}
+
+body {
+    background-image: url(./foodee-fa-fa.png);
+    background-repeat: repeat;
+}
+
+/* The device with borders */
+.smartphone {
+    position: relative;
+    width: 375px;
+    height: 667px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    margin-top: 2em;
+    box-shadow: var(--box-shadow);
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+    width: 375px;
+    height: 667px;
+    background: orange;
+    background-image: url("https://i.pinimg.com/originals/8a/60/ac/8a60ac907f2aca7ceb454f7d931754f2.png");
+    background-size: contain;
+}
+
+.smartphone {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
